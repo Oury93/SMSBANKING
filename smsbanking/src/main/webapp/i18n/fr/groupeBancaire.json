@@ -1,0 +1,23 @@
+{
+    "smsbankingApp": {
+        "groupeBancaire" : {
+            "home": {
+                "title": "GroupeBancaires",
+                "createLabel": "Créer un nouveau Groupe Bancaire",
+                "createOrEditLabel": "Créer ou éditer un Groupe Bancaire"
+            },
+            "created": "Un nouveau Groupe Bancaire a été créé avec l'identifiant {{ param }}",
+            "updated": "Le Groupe Bancaire avec l'identifiant {{ param }} a été mis à jour",
+            "deleted": "Le Groupe Bancaire avec l'identifiant {{ param }} a été supprimé",
+            "delete": {
+                "question": "Etes-vous certain de vouloir supprimer le Groupe Bancaire {{ id }} ?"
+            },
+            "detail": {
+                "title": "Groupe Bancaire"
+            },
+            "libelleG": "Libelle G",
+            "codeG": "Code G",
+            "banque": "Banque"
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "groupeBancaire",
+            "otherEntityName": "groupeBancaire",
+            "relationshipType": "many-to-one",
+            "relationshipValidateRules": [
+                "required"
+            ],
+            "otherEntityField": "libelleG"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "libelleB",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "codeB",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "max"
+            ],
+            "fieldValidateRulesMax": "5"
+        },
+        {
+            "fieldName": "codeP",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "max"
+            ],
+            "fieldValidateRulesMax": "2"
+        }
+    ],
+    "changelogDate": "20170414124910",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "banque",
+    "pagination": "no"
+}

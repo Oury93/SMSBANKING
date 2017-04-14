@@ -1,0 +1,39 @@
+
+<div *ngIf="banque">
+    <h2><span jhiTranslate="smsbankingApp.banque.detail.title">Banque</span> {{banque.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="smsbankingApp.banque.libelleB">Libelle B</span></dt>
+        <dd>
+            <span>{{banque.libelleB}}</span>
+        </dd>
+        <dt><span jhiTranslate="smsbankingApp.banque.codeB">Code B</span></dt>
+        <dd>
+            <span>{{banque.codeB}}</span>
+        </dd>
+        <dt><span jhiTranslate="smsbankingApp.banque.codeP">Code P</span></dt>
+        <dd>
+            <span>{{banque.codeP}}</span>
+        </dd>
+        <dt><span jhiTranslate="smsbankingApp.banque.groupeBancaire">Groupe Bancaire</span></dt>
+        <dd>
+            <div *ngIf="banque.groupeBancaire">
+                <a [routerLink]="['/groupe-bancaire', banque.groupeBancaire?.id]">{{banque.groupeBancaire?.libelleG}}</a>
+            </div>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            (click)="previousState()"
+            class="btn btn-info">
+        <span class="fa fa-arrow-left"></span>&nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button"
+            [routerLink]="['/', { outlets: { popup: 'banque/'+ banque.id + '/edit'} }]"
+            replaceUrl="true"
+            class="btn btn-primary">
+        <span class="fa fa-pencil"></span>&nbsp;<span jhiTranslate="entity.action.edit"> Edit</span>
+    </button>
+</div>

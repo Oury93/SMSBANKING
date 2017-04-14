@@ -1,0 +1,34 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "banque",
+            "otherEntityName": "banque",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "groupeBancaire"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "libelleG",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "codeG",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required",
+                "max"
+            ],
+            "fieldValidateRulesMax": "5"
+        }
+    ],
+    "changelogDate": "20170414124615",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "groupe_bancaire",
+    "pagination": "no"
+}
