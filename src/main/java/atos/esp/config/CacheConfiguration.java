@@ -42,6 +42,9 @@ public class CacheConfiguration {
             cm.createCache(atos.esp.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(atos.esp.domain.PersistentToken.class.getName(), jcacheConfiguration);
             cm.createCache(atos.esp.domain.User.class.getName() + ".persistentTokens", jcacheConfiguration);
+            cm.createCache(atos.esp.domain.GroupeBancaire.class.getName(), jcacheConfiguration);
+            cm.createCache(atos.esp.domain.GroupeBancaire.class.getName() + ".banques", jcacheConfiguration);
+            cm.createCache(atos.esp.domain.Banque.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }
