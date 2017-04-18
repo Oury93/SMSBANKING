@@ -1,6 +1,6 @@
 <div>
     <h2>
-        <span jhiTranslate="smsbankingApp.groupeBancaire.home.title">Groupe Bancaires</span>
+        <span>Gestion de Groupe Bancaires</span>
         <button class="btn btn-primary float-right create-groupe-bancaire" [routerLink]="['/', { outlets: { popup: ['groupe-bancaire-new'] } }]">
             <span class="fa fa-plus"></span>
             <span  jhiTranslate="smsbankingApp.groupeBancaire.home.createLabel">
@@ -16,15 +16,15 @@
         <table class="table table-striped">
             <thead>
             <tr>
-            <th><span jhiTranslate="global.field.id">ID</span></th>
-            <th><span jhiTranslate="smsbankingApp.groupeBancaire.libelleG">Libelle G</span></th>
-            <th><span jhiTranslate="smsbankingApp.groupeBancaire.codeG">Code G</span></th>
+           <!-- <th><span jhiTranslate="global.field.id">ID</span></th>-->
+            <th><span >Libelle  </span></th>
+            <th><span >Code </span></th>
             <th></th>
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let groupeBancaire of groupeBancaires ;trackBy: trackId">
-                <td><a [routerLink]="['../groupe-bancaire', groupeBancaire.id ]">{{groupeBancaire.id}}</a></td>
+               <!-- <td><a [routerLink]="['../groupe-bancaire', groupeBancaire.id ]">{{groupeBancaire.id}}</a></td>-->
                 <td>{{groupeBancaire.libelleG}}</td>
                 <td>{{groupeBancaire.codeG}}</td>
                 <td class="text-right">
